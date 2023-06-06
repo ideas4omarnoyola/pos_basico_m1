@@ -385,14 +385,7 @@
     </svg>                    
     
     <img class="elementos" id="d1" src="../img/pagina07/d1.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos" id="cartel" src="../img/pagina07/cartel.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos infos" id="info1" src="../img/pagina07/info1.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos infos" id="info2" src="../img/pagina07/info2.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos infos" id="info3" src="../img/pagina07/info3.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos infos" id="info4" src="../img/pagina07/info4.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos infos" id="info5" src="../img/pagina07/info5.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos infos" id="info6" src="../img/pagina07/info6.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos infos" id="info7" src="../img/pagina07/info7.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="diagrama" src="../img/pagina07/diagrama.png" data-posX="0" data-posY="0" alt="">
 
     <!-- Script de la página -->
     <script>
@@ -402,21 +395,8 @@
 
         const back = $('#back');
         const d1 = $('#d1');
-        const cartel = $('#cartel');
+        const diagrama = $('#diagrama');
         const robot = $('#robot');
-        const info1 = $('#info1');
-        const info2 = $('#info2');
-        const info3 = $('#info3');
-        const info4 = $('#info4');
-        const info5 = $('#info5');
-        const info6 = $('#info6');
-        const info7 = $('#info7');
-        const infos = $('.infos');
-
-        const informacion = [info1, info2, info3, info4, info5, info6, info7];
-
-        let indexInfo = 0;
-        let delay = 0;
         
 
         // Audios------------------------------------------------------
@@ -450,17 +430,7 @@
 
         function locutarInfo(){
             aplicacion.reproducirAudio(audio[2], final, 1);
-            animacionEntrada(cartel, 'default', 1);
-
-            pausarHablar();
-            setTimeout(()=>{
-                reanudarHablar();
-            }, 1000);
-
-            infos.each(function(){
-                delay = delay + 1;
-                animacionEntrada($(this), 'default', 1, delay);
-            });
+            animacionEntrada(diagrama, 'default', 1);
         }
 
         function final(){
